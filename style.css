@@ -1,0 +1,359 @@
+/* Фон и альтернативная тема */
+/*body {
+    background-color: #6731ac;
+}*/
+
+body /*.dark-theme*/ {
+   
+    background: url(https://i.pinimg.com/originals/c7/c0/58/c7c0588aa229c05a2c6fa8ee95c4f33f.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* Деление сайта на две половины */
+#parent {
+    display: flex;
+}
+#parent #left {
+    flex-grow: 1;
+}
+#parent #right {
+    flex-grow: 1;
+}
+
+
+
+
+/* Код внешки кнопок перехода */
+a.bott{
+  display: inline-block;
+  font-size: 1.1em;
+  width:90px;
+  text-decoration:none;
+  text-align:center;
+  font: bold 14px arial;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin: 20px auto;
+  color: #ccc;
+  background-color: #85cce5;
+  background-image: linear-gradient(top, #85cce5 0%, #85cce5 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #85cce5), color-stop(1, #85cce5));
+  background-image: -moz-linear-gradient(top, #85cce5 0%, #85cce5 100%);
+  background-image: -o-linear-gradient(top, #85cce5 0%, #85cce5 100%);
+  border: none;
+  border-radius: 3px;
+  text-shadow: 0px -1px 0px #000;
+  box-shadow: 0px 1px 0px #8edaf5,0px 5px 0px #8edaf5,0px 6px 6px rgba(0, 0, 0, .6);
+  -webkit-transition: ease .15s all;
+  -moz-transition: ease .15s all;
+  -o-transition: ease .15s all;
+  transition: ease .15s all;
+  -webkit-animation: none;
+   -moz-animation: none;
+   -o-animation: none;
+    animation: none;
+  }
+
+    a.bott:hover, a.bott:focus{
+    -webkit-animation: linear 1.2s light infinite;
+    -moz-animation: linear 1.2s light infinite;
+    -o-animation: linear 1.2s light infinite;
+    animation: linear 1.2s light infinite;
+    }
+    @-webkit-keyframes light{
+    0%   { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    50%   { color: #fff; text-shadow: 0px -1px 0px #444, 0px 0px 5px #ffd, 0px 0px 8px #fff; }
+    100% { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    }
+    @-moz-keyframes light{
+    0%   { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    50%   { color: #fff; text-shadow: 0px -1px 0px #444, 0px 0px 5px #ffd, 0px 0px 8px #fff; }
+    100% { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    }
+    @-o-keyframes light{
+    0%   { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    50%   { color: #fff; text-shadow: 0px -1px 0px #444, 0px 0px 5px #ffd, 0px 0px 8px #fff; }
+    100% { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    }
+    @keyframes light{
+    0%   { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    50%   { color: #fff; text-shadow: 0px -1px 0px #444, 0px 0px 5px #ffd, 0px 0px 8px #fff; }
+    100% { color: #ddd; text-shadow: 0px -1px 0px #000; }
+    }
+    a.bott:active{
+    color: #222;
+    text-shadow: 0px -1px 0px #444,0px 0px 5px #ffd,0px 0px 8px #fff;
+    box-shadow: 0px 1px 0px #666,0px 2px 0px #444,0px 2px 2px rgba(0, 0, 0, .9);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -o-transform: translateY(3px);
+    transform: translateY(3px);
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    animation: none;
+    }
+    /* Код внешки кнопок для копирования */
+                #kildsan {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 2;
+        cursor:pointer;
+        border: 1px solid transparent;
+        border-radius: 10px
+            
+    }
+                #kildsan {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+                #kildsan:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+                #kildsan:active {
+        color: #fffb00
+    }
+                #kildsan:active:after {
+        background: transparent;
+    }
+                #kildsan:hover:before {
+        opacity: 1;
+    }
+                #kildsan:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+                @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+                details[open] div {
+      animation: spoiler 1s;
+    }
+                @keyframes spoiler {
+      0%   {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+/*строка*/
+.stroka { 
+    font-size: 0.8em;
+    position: fixed;
+    left:0px;
+    bottom:2px;
+    margin-bottom:0;
+}
+
+/* связь */
+.svyaz {
+    font-size: 0.9em;
+    position: fixed;
+    left:10px;
+    bottom:20px;
+    margin-bottom:20px;
+}
+
+/*версия*/
+.versia {
+    font-size: 0.8em;
+    position: fixed;
+    left:5px;
+    bottom:15px;
+    margin-bottom:5px;
+}
+
+/*смена темы*/
+.btn-toggle {
+    position:fixed;
+    right:5px;
+    bottom:5px;
+    margin-bottom:15px;
+    border-radius: 50px;
+    background-color: #5F9EA0;
+    box-shadow: 0px 5px 20px #5F9EA0;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*снежинки*/
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+  }
+  
+  @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+  /* Demo Purpose Only*/
+  .demo {
+    font-family: 'Raleway', sans-serif;
+      color:#fff;
+      display: block;
+      margin: 0 auto;
+      padding: 15px 0;
+      text-align: center;
+  }
+  .demo a{
+    font-family: 'Raleway', sans-serif;
+  color: #000;  
+  }           
+            
+
+
+
+/*олени*/
+.sleigh {
+    font-size: 3rem;
+    text-shadow: 0 0 0 #06223f; /*recolor emojis*/
+  }
+  .santa {
+    animation-name: up, across;
+    animation-duration: 10s, 6.5s;
+    animation-timing-function: ease-in-out, linear;
+    animation-iteration-count: 1, 1;
+    animation-delay: 3s, 5s;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 2;
+    filter: blur(1px);
+  }
+  .santa1 {
+    animation-name: up, across;
+    animation-duration: 10s, 6.5s;
+    animation-timing-function: ease-in-out, linear;
+    animation-iteration-count: 1, 1;
+    animation-delay: 3.2s, 5.1s;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 2;
+    filter: blur(1px);
+  }
+  .santa2 {
+    animation-name: up, across;
+    animation-duration: 10s, 6.5s;
+    animation-timing-function: ease-in-out, linear;
+    animation-iteration-count: 1, 1;
+    animation-delay: 3.4s, 5.2s;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 2;
+    filter: blur(1px);
+  }
+  .santa3 {
+    animation-name: up, across;
+    animation-duration: 10s, 6.5s;
+    animation-timing-function: ease-in-out, linear;
+    animation-iteration-count: 1, 1;
+    animation-delay: 3.6s, 5.3s;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 2;
+    filter: blur(1px);
+  }
+  .santa4 {
+    animation-name: up, across;
+    animation-duration: 10s, 6.5s;
+    animation-timing-function: ease-in-out, linear;
+    animation-iteration-count: 1, 1;
+    animation-delay: 3.8s, 5.4s;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 2;
+    filter: blur(1px);
+  }
+  .santa5 {
+    animation-name: up, across;
+    animation-duration: 10s, 6.5s;
+    animation-timing-function: ease-in-out, linear;
+    animation-iteration-count: 1, 1;
+    animation-delay: 4s, 5.6s;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 2;
+    filter: blur(1px);
+  }
+  .fa-star {
+    color: #0b364f;
+  }
+  
+  .fa-sleigh {
+    color: #06223f;
+    transform: scale(-1, 1);
+  }
+  
+  @keyframes up {
+    0% {
+      transform: translateY(0%);
+    }
+  
+    50% {
+      transform: translateY(100px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes across {
+    from {
+      right: 0%;
+    }
+  
+    to {
+      right: 100%;
+    }
+  }
